@@ -13,9 +13,10 @@ form > label {
   margin-top: 2rem;;
   outline: none;
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #FF9B71;
   resize: none;
-  background-color: #568EA3;
+  background-color: #2D3047;
+  color: #FF9B71;
 
 }
 
