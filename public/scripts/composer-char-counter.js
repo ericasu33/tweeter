@@ -16,11 +16,4 @@ $(document).ready(function() {
     
     counter.html(remainingChar);
   });
-
-
-
-
-
-
-
 });

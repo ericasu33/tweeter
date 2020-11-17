@@ -1,4 +1,4 @@
-article {
+#tweet-display {
   margin: 3rem 0 3rem 0;
   border: 3px solid #FF9B71;
   border-radius: 0.6rem;
@@ -26,6 +26,10 @@ article img {
   margin-left: 1rem;
 }
 
+.tweet-post-handle {
+  display: none;
+}
+
 .tweet-post-content {
   padding: 2rem;
 }
@@ -44,8 +48,17 @@ footer div i {
   margin-right: 0.65rem;
 }
 
-/* Pseudo Selectors */
-.tweet-post-handle {
+/* pseudo selectors */
+
+article:hover {
+  border: 1px solid;
+  box-shadow: 1rem 1rem rgba(255, 155, 113, 0.2) ;
+  border-radius: 0.6rem;
+  font-weight: 510;
+}
+
+article:hover .tweet-post-handle {
+  display: block;
   color: #FF9B71;
-  opacity: 0.5;
+  opacity: 0.6;
 }
