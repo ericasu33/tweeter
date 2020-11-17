@@ -1,7 +1,11 @@
 form {
   margin-top: 2rem;
+  color: #FF9B71;
 }
 
+form > label {
+  font-weight: 600;
+}
 #tweet-text {
   display: block;
   width: 100%;
@@ -11,7 +15,8 @@ form {
   border: none;
   border-bottom: 2px solid #000000;
   resize: none;
-  background-color: #f4f1ec;
+  background-color: #568EA3;
+
 }
 
 #tweet-submission {
@@ -23,6 +28,6 @@ form {
 }
 
 #tweet-button {
-  border-radius: 50%;
+  background-color: #FF9B71;
   border: none;
 }

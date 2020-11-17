@@ -3,11 +3,9 @@ header {
   justify-content: center;
   align-items: center;
   height: 25rem;
-  background-color: #c9b495;
-background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-
-  color: #FFFFFF;
+  background-color: #FF9B71;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  color: #2D3047;
 }
 
 #profile-name {
