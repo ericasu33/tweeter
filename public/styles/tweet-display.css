@@ -1,0 +1,51 @@
+article {
+  margin: 3rem 0 3rem 0;
+  border: 3px solid #FF9B71;
+  border-radius: 0.6rem;
+  color: #FF9B71;
+  background-color: #2D3047;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+article header > div {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+article img {
+  width: 3.25rem;
+}
+
+.tweet-post-user {
+  margin-left: 1rem;
+}
+
+.tweet-post-content {
+  padding: 2rem;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #FF9B71;
+  margin: 1rem;
+  padding: 1rem 1rem 0.3rem 1rem;
+  font-size: 1rem;
+}
+
+footer div i {
+  color: #FF9B71;
+  margin-right: 0.65rem;
+}
+
+/* Pseudo Selectors */
+.tweet-post-handle {
+  color: #FF9B71;
+  opacity: 0.5;
+}
