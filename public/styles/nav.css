@@ -13,8 +13,8 @@ nav {
 
 #nav-button {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 6.2rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 #nav-button > img {
