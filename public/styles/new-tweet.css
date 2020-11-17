@@ -6,6 +6,7 @@ form {
 form > label {
   font-weight: 600;
 }
+
 #tweet-text {
   display: block;
   width: 100%;
@@ -17,7 +18,6 @@ form > label {
   resize: none;
   background-color: #2D3047;
   color: #FF9B71;
-
 }
 
 #tweet-submission {
@@ -29,22 +29,25 @@ form > label {
 }
 
 #tweet-button {
-  background-color: #FF9B71;
+  color: #FF9B71;
+  background-color: #2D3047;
   padding: 0.4rem;
-  border: none;
+  border: 1px solid #FF9B71;
+  border-radius: 0.6rem;
 }
+
+#tweet-button:hover {
+  background-color: #FF9B71;
+  color:#2D3047;
+  border: 1px solid #FF9B71;
+  cursor: pointer;
+}
+
+/* Javascript Event Calls */
 
 .count-negative {
   color: #FF8AFD;
   border: 1px solid #FF8AFD;
   border-radius: 90%;
   padding: 0.3rem;
-}
-
-#tweet-button:hover {
-  color: #FF9B71;
-  background-color: #2D3047;
-  border: 1px solid #FF9B71;
-  cursor: pointer;
-  padding: 0.4rem;
 }

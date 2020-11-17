@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" />
   </head>
 
   <body>
@@ -47,7 +48,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section id="new-tweet">
         <form method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -56,6 +57,28 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      
+      <section id="tweet-display">
+        <article>
+          <header>
+            <div>
+              <img src="/images/wheein.png" alt="tweet post profile icon" />
+              <div class="tweet-post-user"> Wheein </div>
+            </div>
+            <div class="tweet-post-handle">@Jungwheein</div>
+          </header>
+            <div class="tweet-post-content">CONTENTTsknlkfksmdas</div>
+          <footer>
+            <div>1 day ago</div>
+            <div>
+              <i class="fa fa-flag"></i>
+              <i class="fa fa-retweet"></i>
+              <i class="fa fa-heart"></i>
+            </div>
+            
+          </footer>
+        </article>
       </section>
 
     <!-- External JS -->
