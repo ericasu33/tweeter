@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  background-color: #c9b495;
+background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+  color: #FFFFFF;
+}
+
+#profile-name {
+  margin-top: 1rem;
+  font-size: 2.441rem;
+  text-align: center;
+}
