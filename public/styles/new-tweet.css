@@ -1,0 +1,28 @@
+form {
+  margin-top: 2rem;
+}
+
+#tweet-text {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  margin-top: 2rem;;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000000;
+  resize: none;
+  background-color: #f4f1ec;
+}
+
+#tweet-submission {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.25rem;
+}
+
+#tweet-button {
+  border-radius: 50%;
+  border: none;
+}
