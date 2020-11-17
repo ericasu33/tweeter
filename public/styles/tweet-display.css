@@ -9,7 +9,6 @@
 article header {
   display: flex;
   justify-content: space-between;
-
 }
 
 article header > div {
