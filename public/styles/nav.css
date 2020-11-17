@@ -1,0 +1,32 @@
+nav {
+  height: 7.5rem;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+ }
+ 
+ #nav-words {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 1.5em 0 1.5em;
+ }
+
+#nav-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 6.2rem;
+}
+
+#nav-button > img {
+   width: 2rem;
+   height: 2rem;
+ }
+
+#logo {
+  font-size: 1.953rem;
+  font-family: 'Bungee', sans-serif;
+}
+
+.emphasis {
+  font-weight: bold;
+}
