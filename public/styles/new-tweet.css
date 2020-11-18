@@ -12,6 +12,14 @@ form > label {
   font-weight: 600;
 }
 
+/* Error Message */
+.error-min-input, 
+.error-max-input {
+  display: none;
+  color: #FF01FB;
+  font-size: 1.25rem;
+}
+
 /* Text Area */
 #tweet-text {
   display: block;
