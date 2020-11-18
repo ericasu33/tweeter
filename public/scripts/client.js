@@ -14,22 +14,13 @@ $(document).ready(function() {
   /*   Tweet Display  */
   /* -----------------*/
 
-  // Gets time difference between now and tweet creation
+  // Timestamp for tweet creationg
   const getTimestamp = function(tweetObj) {
-    // Milliseconds in a day
-    const oneDayByMs = 1000 * 60 * 60 * 24;
-
-    // Time now
+    const oneDayInMs = 1000 * 60 * 60 * 24;
     const nowInMs = new Date().getTime();
-
-    // Time tweet created
     const createdInMs = tweetObj.created_at;
-
-    // Time difference (in ms)
     const differenceMs = nowInMs - createdInMs;
-
-    // Convert to day
-    const dayBeforeNow = Math.floor(differenceMs / oneDayByMs);
+    const dayBeforeNow = Math.floor(differenceMs / oneDayInMs);
 
     if (dayBeforeNow === 1) {
       return `${dayBeforeNow} day ago`;
@@ -38,32 +29,41 @@ $(document).ready(function() {
     return `${dayBeforeNow} days ago`;
   };
 
+  // Prevent XSS
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Tweet post creation
   const createTweetElement = function(tweetObj) {
     const tweetUser = tweetObj.user;
     const createdAt = getTimestamp(tweetObj);
 
     return `
-    <article class="tweet-post">
-    <header>
-      <div>
-        <img src=${tweetUser.avatars} alt="tweet post profile icon" />
-        <div class="tweet-post-username"> ${tweetUser.name} </div>
-      </div>
-      <div class="tweet-post-handle"> ${tweetUser.handle} </div>
-    </header>
-      <div class="tweet-post-content"> ${tweetObj.content.text} </div>
-    <footer>
-      <div>
-        <div> ${createdAt} </div>
-      </div>
-      <div>
-        <i class="fa fa-flag"></i>
-        <i class="fa fa-retweet"></i>
-        <i class="fa fa-heart"></i>
-      </div>
-    </footer>
-  </article>
+      <article class="tweet-post">
+
+        <header>
+          <div>
+            <img src=${escape(tweetUser.avatars)} alt="tweet post profile icon" />
+            <div class="tweet-post-username"> ${escape(tweetUser.name)} </div>
+          </div>
+          <div class="tweet-post-handle"> ${escape(tweetUser.handle)} </div>
+        </header>
+
+        <div class="tweet-post-content"> ${escape(tweetObj.content.text)} </div>
+
+        <footer>
+          <div> ${createdAt} </div>
+          <div class="tweeter-function-icons">
+            <i class="fa fa-flag"></i>
+            <i class="fa fa-retweet"></i>
+            <i class="fa fa-heart"></i>
+          </div>
+        </footer>
+        
+      </article>
     `;
   };
 
@@ -90,9 +90,18 @@ $(document).ready(function() {
   
   $("form").on("submit", function(event) {
     event.preventDefault();
-    
-    // Reset character limit to 140
-    $(".counter").html(140);
+
+    // Validation
+    const tweetContentChar = $("#tweet-text").val().length;
+    if (tweetContentChar > 140) {
+      $(".error-max-input").show();
+      $("#tweet-text").val("").focus();
+      return;
+    } else if (!tweetContentChar) {
+      $(".error-min-input").show();
+      $("#tweet-text").val("").focus();
+      return;
+    }
 
     // Post new tweet and display on browser
     $.ajax("/tweets",
@@ -104,8 +113,20 @@ $(document).ready(function() {
       .then(function() {
         loadTweets();
       });
+    
+    // Reset character limit to 140
+    $(".counter").html(140);
 
     $("#tweet-text").val("").focus();
+  });
+
+  // Remove error message once validation passes
+  $("#tweet-text").on("input", function() {
+    const tweetContentChar = $("#tweet-text").val().length;
+
+    if (tweetContentChar >= 1 && tweetContentChar <= 140) {
+      $(".error-max-input, .error-min-input").hide();
+    }
   });
 
   loadTweets();
