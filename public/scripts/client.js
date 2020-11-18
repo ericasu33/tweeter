@@ -38,6 +38,7 @@ $(document).ready(function() {
 
   const createTweetElement = function(tweetObj) {
     const tweetUser = tweetObj.user;
+    const createdAt = getTimestamp(tweetObj);
 
     //==== Article Container ====//
     const article = $(`<article></article>`);
@@ -46,7 +47,7 @@ $(document).ready(function() {
     const header = $(`<header></header>`);
   
     // Create tweet-post user profile
-    const tweetPostUser = $(`<div class="tweet-post-user"></div>`);
+    const tweetPostUser = $(`<div></div>`);
 
     // Profile Icon
     $(tweetPostUser).append(`<img src=${tweetUser.avatars} alt="tweet post profile icon"/>`);
@@ -62,17 +63,26 @@ $(document).ready(function() {
     //==== Content ====//
     const content = $(`<div class="tweet-post-content"> ${tweetObj.content.text} </div>`);
 
-    //article -> footer
+    //==== Footer ====//
     const footer = $(`<footer></footer>`);
 
-    const tweet = article.append(header).append(content);
-    // const tweet = $(`<article> ${tweetObj.content.text} </article>`);
+    // Timestamp
+    const timeStamp = $(`<div><div> ${tweetObj.created_at} </div></div>`);
+
+    // Icons (flag, retweet, like)
+    const icons = $(`<div></div>`);
+    const flagIcon = $(`<i class="fa fa-flag"></i>`);
+    const retweetIcon = $(`<i class="fa fa-retweet"></i>`);
+    const heartIcon = $(`<i class="fa fa-heart"></i>`);
+    icons.append(flagIcon).append(retweetIcon).append(heartIcon);
+    
+    footer.append(timeStamp).append(icons);
+
+    const tweet = article.append(header).append(content).append(footer);
+
     console.log(tweet);
     return tweet;
 
-
-
-    //return <article> containing entire HTML structure of the tweet
   };
 
   const renderTweets = function(tweets) {
