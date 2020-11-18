@@ -3,7 +3,7 @@ $(document).ready(function() {
     const countChar = $(this).val().length;
     const remainingChar = 140 - countChar;
 
-    let counter = $(this).parent().find("output");
+    const counter = $(this).parent().find("output");
     // console.log(this.form[2]);
     if (remainingChar < 0) {
       // console.log($(this).val());
