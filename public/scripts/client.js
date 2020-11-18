@@ -106,9 +106,17 @@ $(document).ready(function() {
       {
         type: "POST",
         data: $("form").serialize(),
+      }
+    );
+    
+    $("#tweet-text").val("").focus();
+    
+    // Display new tweets
+    $.ajax("/tweets", { method: "GET" })
+      .then(function(newTweetPost) {
+        renderTweets(newTweetPost);
       });
     
-
   });
 
 });
