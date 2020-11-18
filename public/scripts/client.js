@@ -36,12 +36,35 @@ const data = [
 
 $(document).ready(function() {
 
+  const getTimestamp = function(tweetObj) {
+    // Milliseconds in a day
+    const oneDayByMs = 1000 * 60 * 60 * 24;
+
+    // Time now
+    const nowInMs = new Date().getTime();
+
+    // Time tweet created
+    const createdInMs = tweetObj.created_at;
+
+    // Time difference (in ms)
+    const differenceMs = nowInMs - createdInMs;
+
+    // Convert to day
+    const dayBeforeNow = Math.floor(differenceMs / oneDayByMs);
+
+    if (dayBeforeNow === 1) {
+      return `${dayBeforeNow} day ago`;
+    }
+
+    return `${dayBeforeNow} days ago`;
+  };
+
   const createTweetElement = function(tweetObj) {
     const tweetUser = tweetObj.user;
     const createdAt = getTimestamp(tweetObj);
 
     //==== Article Container ====//
-    const article = $(`<article></article>`);
+    const article = $(`<article class="tweet-post"></article>`);
 
     //==== Header ====//
     const header = $(`<header></header>`);
@@ -67,7 +90,7 @@ $(document).ready(function() {
     const footer = $(`<footer></footer>`);
 
     // Timestamp
-    const timeStamp = $(`<div><div> ${tweetObj.created_at} </div></div>`);
+    const timeStamp = $(`<div><div> ${createdAt} </div></div>`);
 
     // Icons (flag, retweet, like)
     const icons = $(`<div></div>`);
@@ -89,7 +112,7 @@ $(document).ready(function() {
     let tweet;
     for (const tweetObj of tweets) {
       tweet = createTweetElement(tweetObj);
-      $(".tweet-display").append(tweet);
+      $("#tweet-display").append(tweet);
     }
   };
 
