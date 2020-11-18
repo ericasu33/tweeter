@@ -13,8 +13,7 @@ nav {
  }
 
  .nav-logo {
-  font-size: 1.953rem;
-  font-family: 'Bungee', sans-serif;
+  font: 1.953rem 'Bungee', sans-serif;
 }
  
  /* Nav label/words */

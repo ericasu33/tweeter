@@ -17,8 +17,7 @@
 body {
   color: #000000;
   background-color: #2D3047;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.563rem;
+  font: 1.563rem 'Source Sans Pro', sans-serif;
 }
 
 /*
