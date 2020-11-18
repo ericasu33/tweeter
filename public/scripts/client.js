@@ -60,13 +60,12 @@ $(document).ready(function() {
     header.append(tweetPostUser).append(tweetPostHandle);
 
     //==== Content ====//
-
-
+    const content = $(`<div class="tweet-post-content"> ${tweetObj.content.text} </div>`);
 
     //article -> footer
     const footer = $(`<footer></footer>`);
 
-    const tweet = article.append(header);
+    const tweet = article.append(header).append(content);
     // const tweet = $(`<article> ${tweetObj.content.text} </article>`);
     console.log(tweet);
     return tweet;
