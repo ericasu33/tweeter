@@ -54,6 +54,6 @@ form > label {
 .count-negative {
   color: #FF8AFD;
   border: 1px solid #FF8AFD;
-  border-radius: 90%;
+  border-radius: 1rem;
   padding: 0.3rem;
 }
