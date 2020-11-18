@@ -3,7 +3,7 @@
 /* ---------------- */
 
 /* Display of tweets */
-.tweet-display {
+.tweet-post {
   margin: 3rem 0 3rem 0;
   border: 3px solid var(--color-d-light);
   border-radius: 0.6rem;
@@ -24,7 +24,7 @@ article header > div {
 }
 
 article img {
-  width: 2.75rem;
+  filter: brightness(300%)
 }
 
 .tweet-post-username {
