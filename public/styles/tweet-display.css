@@ -8,7 +8,6 @@
   border: 2px solid var(--color-d-light);
   border-radius: 0.6rem;
   color: var(--color-d-light);
-  background-color: var(--color-d-dark);
 }
 
 /* User icon and name */
@@ -34,16 +33,12 @@ article img {
   font-size: 1.953rem;
 }
 
-/* Twitter handle -- hidden until hover */
-.tweet-post-handle {
-  display: none;
-}
-
 .tweet-post-content {
   padding: 2rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-/* Timestamp and report, retweet, like icons */
 article footer {
   display: flex;
   justify-content: space-between;
@@ -53,8 +48,17 @@ article footer {
   font-size: 1rem;
 }
 
+/* Hidden until hover */
+.tweet-post-handle {
+  display: none;
+  align-self: center;
+}
+
+.tweeter-function-icons {
+  display: none;
+}
+
 footer div i {
-  color: var(--color-d-light);
   margin-right: 0.65rem;
 }
 
@@ -66,9 +70,14 @@ article:hover {
   font-weight: 510;
 }
 
-/* Unhide tweet handle */
+/* Unhide */
 article:hover .tweet-post-handle {
   display: block;
   color: var(--color-d-light);
   opacity: 0.25;
+}
+
+article:hover .tweeter-function-icons {
+  display: block;
+  color: var(--color-d-light);
 }
