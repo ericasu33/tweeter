@@ -4,12 +4,12 @@ body > header {
   align-items: center;
   height: 25rem;
   margin-top: 7.5rem;
-  background-color: #FF9B71;
+  background-color: var(--color-d-light);
   background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
-  color: #2D3047;
+  color: var(--color-d-dark);
 }
 
-#profile-name {
+.profile-name {
   margin-top: 1rem;
   font-size: 3.052rem;
   text-align: center;

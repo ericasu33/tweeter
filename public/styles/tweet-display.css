@@ -1,9 +1,9 @@
-#tweet-display {
+.tweet-display {
   margin: 3rem 0 3rem 0;
-  border: 3px solid #FF9B71;
+  border: 3px solid var(--color-d-light);
   border-radius: 0.6rem;
-  color: #FF9B71;
-  background-color: #2D3047;
+  color: var(--color-d-light);
+  background-color: #var(--color-d-dark);
 }
 
 article header {
@@ -36,14 +36,14 @@ article img {
 article footer {
   display: flex;
   justify-content: space-between;
-  border-top: 3px solid #FF9B71;
+  border-top: 3px solid var(--color-d-light);
   margin: 1rem;
   padding: 1rem 1rem 0.3rem 1rem;
   font-size: 1rem;
 }
 
 footer div i {
-  color: #FF9B71;
+  color: var(--color-d-light);
   margin-right: 0.65rem;
 }
 
@@ -58,6 +58,6 @@ article:hover {
 
 article:hover .tweet-post-handle {
   display: block;
-  color: #FF9B71;
+  color: var(--color-d-light);
   opacity: 0.6;
 }

@@ -1,6 +1,6 @@
 form {
   margin-top: 2rem;
-  color: #FF9B71;
+  color: var(--color-d-light);
 }
 
 form > label {
@@ -14,13 +14,13 @@ form > label {
   margin-top: 1rem;
   outline: none;
   border: none;
-  border-bottom: 2px solid #FF9B71;
+  border-bottom: 2px solid var(--color-d-light);
   resize: none;
-  background-color: #2D3047;
-  color: #FF9B71;
+  background-color: var(--color-d-dark);
+  color: var(--color-d-light);
 }
 
-#tweet-submission {
+.tweet-submission {
   display: flex;
   justify-content: space-between;
   margin-top: 1.2rem;
@@ -28,18 +28,18 @@ form > label {
   font-size: 1.25rem;
 }
 
-#tweet-button {
-  color: #FF9B71;
-  background-color: #2D3047;
+.tweet-button {
+  color: var(--color-d-light);
+  background-color: var(--color-d-dark);
   padding: 0.4rem;
-  border: 1px solid #FF9B71;
+  border: 1px solid var(--color-d-light);
   border-radius: 0.6rem;
 }
 
-#tweet-button:hover {
-  background-color: #FF9B71;
-  color:#2D3047;
-  border: 1px solid #FF9B71;
+.tweet-button:hover {
+  background-color: var(--color-d-light);
+  color:var(--color-d-dark);
+  border: 1px solid var(--color-d-light);
   cursor: pointer;
 }
 

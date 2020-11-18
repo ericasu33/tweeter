@@ -3,32 +3,33 @@ nav {
   position: fixed;
   height: 7.5rem;
   width: 100vw;
-  background-color: #2D3047;
-  color: #FF9B71;
+  background-color: var(--color-d-dark);
+  color: var(--color-d-light);
  }
  
- #nav-words {
+.nav-words {
   display: flex;
   justify-content: space-between;
   padding: 1.5em 1.5em 0 1.5em;
  }
 
-#nav-button {
+.nav-button {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#nav-button > img {
+.nav-button > img {
    width: 2rem;
    height: 2rem;
- }
+}
 
-#logo {
+.logo {
   font-size: 1.953rem;
   font-family: 'Bungee', sans-serif;
 }
 
-.emphasis {
+.nav-bold,
+.profile-name-bold {
   font-weight: bold;
 }
