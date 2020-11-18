@@ -24,7 +24,9 @@ article header > div {
 }
 
 article img {
-  filter: brightness(300%)
+  /* position: absolute; */
+  filter: brightness(300%);
+  z-index: 0;
 }
 
 .tweet-post-username {
