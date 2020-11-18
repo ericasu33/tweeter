@@ -9,9 +9,12 @@
 /* ---------------- */
 
 $(document).ready(function() {
-  /* ---------------- */
+  
+  /* -----------------*/
   /*   Tweet Display  */
-  /* ---------------- */
+  /* -----------------*/
+
+  // Gets time difference between now and tweet creation
   const getTimestamp = function(tweetObj) {
     // Milliseconds in a day
     const oneDayByMs = 1000 * 60 * 60 * 24;
@@ -35,6 +38,7 @@ $(document).ready(function() {
     return `${dayBeforeNow} days ago`;
   };
 
+  // Tweet post creation
   const createTweetElement = function(tweetObj) {
     const tweetUser = tweetObj.user;
     const createdAt = getTimestamp(tweetObj);
@@ -83,6 +87,7 @@ $(document).ready(function() {
     return tweet;
   };
 
+  // Tweets display on browser
   const renderTweets = function(tweets) {
     let tweet;
     for (const tweetObj of tweets) {
@@ -92,9 +97,18 @@ $(document).ready(function() {
   };
 
   /* ---------------- */
-  /*   Tweet Posts    */
+  /*   Post Tweets    */
   /* ---------------- */
 
+  // Display tweets function
+  const loadTweets = function() {
+    $.ajax("/tweets", { method: "GET" })
+      .then(function(newTweetPost) {
+        renderTweets(newTweetPost);
+      });
+  };
+  
+  // When `tweet` button is clicked
   $("form").on("submit", function(event) {
     event.preventDefault();
     
@@ -107,18 +121,16 @@ $(document).ready(function() {
         type: "POST",
         data: $("form").serialize(),
       }
-    );
-    
-    $("#tweet-text").val("").focus();
-    
-    // Display new tweets
-    $.ajax("/tweets", { method: "GET" })
-      .then(function(newTweetPost) {
-        renderTweets(newTweetPost);
+    ) // Displays new tweet on browser
+      .then(function() {
+        loadTweets();
       });
-    
+
+    $("#tweet-text").val("").focus();
   });
 
+  // Display tweets on browser load
+  loadTweets();
 });
 
 
