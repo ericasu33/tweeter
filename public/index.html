@@ -50,11 +50,17 @@
     <main>
       <section>
         <form method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
+          <label for="tweet-text"> What are you humming about? </label>
+          <div class="error-min-input">
+            <p> Invalid. Minimum character length is 1. </p>
+          </div>
+          <div class="error-max-input">
+            <p> Invalid. Maximum character length is 140. Please check the counter for your current character count. </p>
+          </div>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-submission">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <button class="tweet-button" type="submit"> Tweet </button>
+            <output name="counter" class="counter" for="tweet-text"> 140 </output>
           </div>
         </form>
       </section>
