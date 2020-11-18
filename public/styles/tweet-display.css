@@ -5,7 +5,7 @@
 /* Display of tweets */
 .tweet-post {
   margin: 3rem 0 3rem 0;
-  border: 3px solid var(--color-d-light);
+  border: 2px solid var(--color-d-light);
   border-radius: 0.6rem;
   color: var(--color-d-light);
   background-color: var(--color-d-dark);
@@ -60,7 +60,7 @@ footer div i {
 
 /* pseudo selectors */
 article:hover {
-  border: 1px solid;
+  border: 3px solid;
   box-shadow: 1rem 1rem rgba(255, 155, 113, 0.2) ;
   border-radius: 0.6rem;
   font-weight: 510;
