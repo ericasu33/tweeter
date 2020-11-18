@@ -24,11 +24,12 @@ article header > div {
 }
 
 article img {
-  width: 3.25rem;
+  width: 2.75rem;
 }
 
 .tweet-post-user {
   margin-left: 1rem;
+  font-size: 1.953rem;
 }
 
 /* Twitter handle -- hidden until hover */
@@ -67,5 +68,5 @@ article:hover {
 article:hover .tweet-post-handle {
   display: block;
   color: var(--color-d-light);
-  opacity: 0.6;
+  opacity: 0.25;
 }
