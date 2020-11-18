@@ -1,3 +1,8 @@
+/* ---------------- */
+/*      Header      */
+/* ---------------- */
+
+/* Overall Header */
 body > header {
   display: flex;
   justify-content: center;
@@ -7,6 +12,11 @@ body > header {
   background-color: var(--color-d-light);
   background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
   color: var(--color-d-dark);
+}
+
+/* Profile name */
+.profile-name-bold {
+  font-weight: bold;
 }
 
 .profile-name {

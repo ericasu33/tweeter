@@ -1,3 +1,8 @@
+/* ---------------- */
+/*        Nav       */
+/* ---------------- */
+
+/* Set nav-bar to fixed */
 nav {
   top: 0;
   position: fixed;
@@ -6,30 +11,32 @@ nav {
   background-color: var(--color-d-dark);
   color: var(--color-d-light);
  }
+
+ .nav-logo {
+  font-size: 1.953rem;
+  font-family: 'Bungee', sans-serif;
+}
  
+ /* Nav label/words */
 .nav-words {
   display: flex;
   justify-content: space-between;
   padding: 1.5em 1.5em 0 1.5em;
  }
 
-.nav-button {
+.nav-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.nav-button > img {
+/* Empasis on new tweet word -write- */
+.nav-bold {
+  font-weight: bold;
+}
+
+/* Button to create new tweets */
+.nav-new-tweet > img {
    width: 2rem;
    height: 2rem;
-}
-
-.logo {
-  font-size: 1.953rem;
-  font-family: 'Bungee', sans-serif;
-}
-
-.nav-bold,
-.profile-name-bold {
-  font-weight: bold;
 }

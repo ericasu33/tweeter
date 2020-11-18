@@ -1,11 +1,17 @@
+/* ---------------- */
+/*   Tweet Display  */
+/* ---------------- */
+
+/* Display of tweets */
 .tweet-display {
   margin: 3rem 0 3rem 0;
   border: 3px solid var(--color-d-light);
   border-radius: 0.6rem;
   color: var(--color-d-light);
-  background-color: #var(--color-d-dark);
+  background-color: var(--color-d-dark);
 }
 
+/* User icon and name */
 article header {
   display: flex;
   justify-content: space-between;
@@ -25,6 +31,7 @@ article img {
   margin-left: 1rem;
 }
 
+/* Twitter handle -- hidden until hover */
 .tweet-post-handle {
   display: none;
 }
@@ -33,6 +40,7 @@ article img {
   padding: 2rem;
 }
 
+/* Timestamp and report, retweet, like icons */
 article footer {
   display: flex;
   justify-content: space-between;
@@ -48,7 +56,6 @@ footer div i {
 }
 
 /* pseudo selectors */
-
 article:hover {
   border: 1px solid;
   box-shadow: 1rem 1rem rgba(255, 155, 113, 0.2) ;
@@ -56,6 +63,7 @@ article:hover {
   font-weight: 510;
 }
 
+/* Unhide tweet handle */
 article:hover .tweet-post-handle {
   display: block;
   color: var(--color-d-light);

@@ -1,3 +1,8 @@
+/* ---------------- */
+/*    New Tweet     */
+/* ---------------- */
+
+/* New tweet submission form */
 form {
   margin-top: 2rem;
   color: var(--color-d-light);
@@ -7,6 +12,7 @@ form > label {
   font-weight: 600;
 }
 
+/* Text Area */
 #tweet-text {
   display: block;
   width: 100%;
@@ -20,6 +26,7 @@ form > label {
   color: var(--color-d-light);
 }
 
+/* Submit */
 .tweet-submission {
   display: flex;
   justify-content: space-between;
@@ -36,6 +43,7 @@ form > label {
   border-radius: 0.6rem;
 }
 
+/* Pseudo-Selectors */
 .tweet-button:hover {
   background-color: var(--color-d-light);
   color:var(--color-d-dark);
@@ -43,8 +51,7 @@ form > label {
   cursor: pointer;
 }
 
-/* jQuery Event Calls */
-
+/* Applied in jQuery only*/
 .count-negative {
   color: #FF8AFD;
   border: 1px solid #FF8AFD;
