@@ -43,48 +43,28 @@ $(document).ready(function() {
     const tweetUser = tweetObj.user;
     const createdAt = getTimestamp(tweetObj);
 
-    //==== Article Container ====//
-    const article = $(`<article class="tweet-post"></article>`);
-
-    //==== Header ====//
-    const header = $(`<header></header>`);
-  
-    // Create tweet-post user profile
-    const tweetPostUser = $(`<div></div>`);
-
-    // Profile Icon
-    $(tweetPostUser).append(`<img src=${tweetUser.avatars} alt="tweet post profile icon"/>`);
-
-    // Profile Name
-    $(tweetPostUser).append(`<div class="tweet-post-username"> ${tweetUser.name} </div>`);
-
-    // Profile Handle
-    const tweetPostHandle = $(`<div class="tweet-post-handle"> ${tweetUser.handle} </div>`);
-
-    header.append(tweetPostUser).append(tweetPostHandle);
-
-    //==== Content ====//
-    const content = $(`<div class="tweet-post-content"> ${tweetObj.content.text} </div>`);
-
-    //==== Footer ====//
-    const footer = $(`<footer></footer>`);
-
-    // Timestamp
-    const timeStamp = $(`<div><div> ${createdAt} </div></div>`);
-
-    // Icons (flag, retweet, like)
-    const icons = $(`<div></div>`);
-    const flagIcon = $(`<i class="fa fa-flag"></i>`);
-    const retweetIcon = $(`<i class="fa fa-retweet"></i>`);
-    const heartIcon = $(`<i class="fa fa-heart"></i>`);
-    icons.append(flagIcon).append(retweetIcon).append(heartIcon);
-    
-    footer.append(timeStamp).append(icons);
-
-    // Appending article contents to <articel>
-    const tweet = article.append(header).append(content).append(footer);
-
-    return tweet;
+    return `
+    <article class="tweet-post">
+    <header>
+      <div>
+        <img src=${tweetUser.avatars} alt="tweet post profile icon" />
+        <div class="tweet-post-username"> ${tweetUser.name} </div>
+      </div>
+      <div class="tweet-post-handle"> ${tweetUser.handle} </div>
+    </header>
+      <div class="tweet-post-content"> ${tweetObj.content.text} </div>
+    <footer>
+      <div>
+        <div> ${createdAt} </div>
+      </div>
+      <div>
+        <i class="fa fa-flag"></i>
+        <i class="fa fa-retweet"></i>
+        <i class="fa fa-heart"></i>
+      </div>
+    </footer>
+  </article>
+    `;
   };
 
   // Tweets display on browser
@@ -100,28 +80,27 @@ $(document).ready(function() {
   /*   Post Tweets    */
   /* ---------------- */
 
-  // Display tweets function
+  // Display tweets
   const loadTweets = function() {
-    $.ajax("/tweets", { method: "GET" })
+    $.ajax("/tweets")
       .then(function(newTweetPost) {
         renderTweets(newTweetPost);
       });
   };
   
-  // When `tweet` button is clicked
   $("form").on("submit", function(event) {
     event.preventDefault();
     
-    // Reset character counter to 140
+    // Reset character limit to 140
     $(".counter").html(140);
 
-    // New tweet content is sent to server
+    // Post new tweet and display on browser
     $.ajax("/tweets",
       {
-        type: "POST",
+        method: "POST",
         data: $("form").serialize(),
       }
-    ) // Displays new tweet on browser
+    )
       .then(function() {
         loadTweets();
       });
@@ -129,7 +108,6 @@ $(document).ready(function() {
     $("#tweet-text").val("").focus();
   });
 
-  // Display tweets on browser load
   loadTweets();
 });
 
