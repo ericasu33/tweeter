@@ -3,10 +3,8 @@
   position: fixed;
   bottom: 1.5rem;
   right: 2.5rem;
-  width: 4rem;
-  height: 4rem;
-  line-height: 1rem;
-  padding: 1rem;
+  width: 6rem;
+  height: 6rem;
   z-index: 99;
   border: 3px solid #FFFFFF;
   border-radius: 50%;
@@ -21,8 +19,11 @@
 }
 
 /* Desktop */
-#scroll-to-top-button:hover {
-  /* border: 3px solid var(--color-d-dark); */
-  color: var(--color-d-dark);
-  background-color: var(--color-d-light);
+@media only screen and (min-width: 1024px) {
+  
+  /* Pseudo-Selectors */
+  #scroll-to-top-button:hover {
+    color: var(--color-d-dark);
+    background-color: var(--color-d-light);
+  }
 }
