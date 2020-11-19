@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap">
     
     <!-- App CSS -->
+    <link rel="stylesheet" type="text/css" href="/styles/root.css"/>
     <link rel="stylesheet" type="text/css" href="/styles/font-awesome-4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="/styles/layout.css"/>
     <link rel="stylesheet" type="text/css" href="/styles/nav.css"/>
     <link rel="stylesheet" type="text/css" href="/styles/header.css"/>
     <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css"/>
     <link rel="stylesheet" type="text/css" href="/styles/tweet-display.css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/root.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/scroll-to-top.css"/>
 
   </head>
 
@@ -48,6 +49,9 @@
 
     <!-- Page-specific (main) content here -->
     <main>
+      <button id="scroll-to-top-button">
+        <i class="fa fa-angle-double-up fa-lg"></i>
+      </button>
       <section id="tweet-input">
         <form method="POST" action="/tweets">
           <label for="tweet-text"> What are you humming about? </label>
@@ -75,6 +79,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/compose-button-navbar.js"></script>
+    <script type="text/javascript" src="/scripts/compose-scroll-to-top.js"></script>
     <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
 
   </body>
