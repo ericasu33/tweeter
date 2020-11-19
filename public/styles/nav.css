@@ -28,11 +28,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 /* Empasis on new tweet word -write- */
 .nav-bold {
   font-weight: bold;
+  color: #FFFFFF;
 }
 
 /* Icon to create new tweets */
@@ -49,15 +51,20 @@ nav {
   animation-timing-function: ease-out;
 }
 
-/* Pseudo-Selectors */
-.nav-new-tweet:hover {
-  filter: brightness(200%);
-  cursor: pointer;
-}
-
 /* Keyframe Animation */
 @keyframes tweet-icon-bounce {
   0%   { transform: translateY(0.4rem); }
   50%  { transform: translateY(0); }
   100% { transform: translateY(0.4rem); }
 }
+
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  
+  /* Pseudo-Selectors */
+  .nav-new-tweet:hover {
+    filter: brightness(200%);
+  }
+}
+
