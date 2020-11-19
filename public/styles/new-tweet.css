@@ -2,7 +2,6 @@
 /*    New Tweet     */
 /* ---------------- */
 
-/* New tweet submission form */
 form {
   margin-top: 2rem;
   color: var(--color-d-light);
@@ -16,8 +15,8 @@ form > label {
 .error-min-input, 
 .error-max-input {
   display: none;
-  color: #ff54e5;
-  font-size: 1.25rem;
+  color: #ff5f54;
+  font-size: 1.563rem;
 }
 
 /* Text Area */
@@ -50,18 +49,25 @@ form > label {
   border-radius: 0.6rem;
 }
 
-/* Pseudo-Selectors */
-.tweet-button:hover {
-  background-color: var(--color-d-light);
-  color:var(--color-d-dark);
-  border: 1px solid var(--color-d-light);
-  cursor: pointer;
-}
-
 /* Applied in jQuery only*/
 .count-negative {
-  color: #FF8AFD;
-  border: 1px solid #FF8AFD;
-  border-radius: 1rem;
-  padding: 0.3rem;
+  color: #ff5f54;
+  border: 1px solid #ff5f54;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  
+  /* Pseudo-Selectors */
+  .tweet-button:hover {
+    background-color: var(--color-d-light);
+    color:var(--color-d-dark);
+    border: 1px solid var(--color-d-light);
+    cursor: pointer;
+  }
 }
