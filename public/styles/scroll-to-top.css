@@ -20,7 +20,12 @@
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
-  
+  #scroll-to-top-button {
+    width: 4rem;
+    height: 4rem;
+    font-size: 0.8rem;;
+  }
+
   /* Pseudo-Selectors */
   #scroll-to-top-button:hover {
     color: var(--color-d-dark);

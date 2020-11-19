@@ -3,7 +3,7 @@
 /* ---------------- */
 
 /* Overall Header */
-body > header {
+.desktop-flex > header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,4 +23,17 @@ body > header {
   margin-top: 1rem;
   font-size: 3.052rem;
   text-align: center;
+}
+
+ /* Desktop */
+ @media only screen and (min-width: 1024px) {
+  .desktop-profile {
+    padding: 1.5rem 6rem;
+    background-color: var(--color-d-light);
+    background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
+  }
+
+  .desktop-flex > header {
+    margin-top: 0rem;
+  }
 }

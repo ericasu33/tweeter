@@ -22,7 +22,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <div class="nav-words">
         <span class="nav-logo"> tweeter </span>
@@ -36,42 +35,43 @@
       </div>
     </nav>
 
-    <header>
-      <div>
-        <div>
-          <img src="/images/profile-hex.png" alt="profile-photo" />
+    <div class="desktop-flex">
+      <header>
+        <div class="desktop-profile">
+          <div>
+            <img src="/images/profile-hex.png" alt="profile-photo" />
+          </div>
+          <div class="profile-name">
+            <span class="profile-name-bold"> Erica </span> Su 
+          </div>
         </div>
-        <div class="profile-name">
-          <span class="profile-name-bold"> Erica </span> Su 
-        </div>
-    </div>
-    </header>
+     </header>
 
-    <!-- Page-specific (main) content here -->
-    <main>
-      <button id="scroll-to-top-button">
-        <i class="fa fa-angle-double-up fa-3x"></i>
-      </button>
-      <section id="tweet-input">
-        <form method="POST" action="/tweets">
-          <label for="tweet-text"> What are you humming about? </label>
-          <div class="error-min-input">
-            <p> &#9888 Invalid. Minimum character length is 1 (one). </p>
-          </div>
-          <div class="error-max-input">
-            <p> &#9888 Invalid. Maximum character length is 140 (one hundred forty). Please check the counter for your current character count. </p>
-          </div>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="tweet-submission">
-            <button class="tweet-button" type="submit"> Tweet </button>
-            <output name="counter" class="counter" for="tweet-text"> 140 </output>
-          </div>
-        </form>
-      </section>
-      
-      <section id="tweet-display">
-      </section>
-    </main>
+      <main>
+        <button id="scroll-to-top-button">
+          <i class="fa fa-angle-double-up fa-3x"></i>
+        </button>
+
+        <section id="tweet-input">
+          <form method="POST" action="/tweets">
+            <label for="tweet-text"> What are you humming about? </label>
+            <div class="error-min-input">
+              <p> &#9888 Invalid. Minimum character length is 1 (one). </p>
+            </div>
+            <div class="error-max-input">
+              <p> &#9888 Invalid. Maximum character length is 140 (one hundred forty). Please check the counter for your current character count. </p>
+            </div>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="tweet-submission">
+              <button class="tweet-button" type="submit"> Tweet </button>
+              <output name="counter" class="counter" for="tweet-text"> 140 </output>
+            </div>
+          </form>
+        </section>
+        
+        <section id="tweet-display"></section>
+      </main>
+    </div>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
