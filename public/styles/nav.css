@@ -49,6 +49,13 @@ nav {
   animation-timing-function: ease-out;
 }
 
+/* Pseudo-Selectors */
+.nav-new-tweet:hover {
+  filter: brightness(200%);
+  cursor: pointer;
+}
+
+/* Keyframe Animation */
 @keyframes tweet-icon-bounce {
   0%   { transform: translateY(0.4rem); }
   50%  { transform: translateY(0); }
