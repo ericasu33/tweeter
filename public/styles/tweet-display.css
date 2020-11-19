@@ -23,7 +23,6 @@ article header > div {
 }
 
 article img {
-  /* position: absolute; */
   filter: brightness(300%);
   z-index: 0;
 }
@@ -62,7 +61,7 @@ footer div i {
   margin-right: 0.65rem;
 }
 
-/* pseudo selectors */
+/* Pseudo-Selectors */
 article:hover {
   border: 3px solid;
   box-shadow: 1rem 1rem rgba(255, 155, 113, 0.2) ;
@@ -70,7 +69,7 @@ article:hover {
   font-weight: 510;
 }
 
-/* Unhide */
+/* Unhide elemets */
 article:hover .tweet-post-handle {
   display: block;
   color: var(--color-d-light);
