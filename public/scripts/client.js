@@ -46,10 +46,10 @@ $(document).ready(function() {
 
         <header>
           <div>
-            <img src=${escape(tweetUser.avatars)} alt="tweet post profile icon" />
-            <div class="tweet-post-username"> ${escape(tweetUser.name)} </div>
+            <img src=${tweetUser.avatars} alt="tweet post profile icon" />
+            <div class="tweet-post-username"> ${tweetUser.name} </div>
           </div>
-          <div class="tweet-post-handle"> ${escape(tweetUser.handle)} </div>
+          <div class="tweet-post-handle"> ${tweetUser.handle} </div>
         </header>
 
         <div class="tweet-post-content"> ${escape(tweetObj.content.text)} </div>
@@ -69,9 +69,8 @@ $(document).ready(function() {
 
   // Tweets display on browser
   const renderTweets = function(tweets) {
-    let tweet;
     for (const tweetObj of tweets) {
-      tweet = createTweetElement(tweetObj);
+      let tweet = createTweetElement(tweetObj);
       $("#tweet-display").prepend(tweet);
     }
   };
@@ -83,8 +82,8 @@ $(document).ready(function() {
   // Display tweets
   const loadTweets = function() {
     $.ajax("/tweets")
-      .then(function(newTweetPost) {
-        renderTweets(newTweetPost);
+      .then(function(allTweets) {
+        renderTweets(allTweets);
       });
   };
   
@@ -115,6 +114,7 @@ $(document).ready(function() {
       }
     )
       .then(function() {
+        $("#tweet-display").empty();
         loadTweets();
       });
     
