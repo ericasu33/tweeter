@@ -91,6 +91,9 @@ $(document).ready(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
 
+    // Fadeout submit button if no content
+    $(".tweet-button").css("opacity", "0.4");
+
     // Validation
     const tweetContentChar = $("#tweet-text").val().length;
 
@@ -129,7 +132,7 @@ $(document).ready(function() {
       $(".error-max-input, .error-min-input").hide();
     }
   });
-
+  
   loadTweets();
 });
 
