@@ -62,7 +62,7 @@ $(document).ready(function() {
             <i class="fa fa-heart"></i>
           </div>
         </footer>
-        
+
       </article>
     `;
   };
@@ -93,13 +93,14 @@ $(document).ready(function() {
 
     // Validation
     const tweetContentChar = $("#tweet-text").val().length;
+
     if (tweetContentChar > 140) {
       $(".error-max-input").show();
-      $("#tweet-text").val("").focus();
+      $("#tweet-text").focus();
       return;
-    } else if (!tweetContentChar) {
+    } else if (!$.trim($("#tweet-text").val())) {
       $(".error-min-input").show();
-      $("#tweet-text").val("").focus();
+      $("#tweet-text").focus();
       return;
     }
 
