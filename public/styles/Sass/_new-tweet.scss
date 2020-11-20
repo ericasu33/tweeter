@@ -1,0 +1,76 @@
+/* ---------------- */
+/*    New Tweet     */
+/* ---------------- */
+
+form {
+  margin-top: 2rem;
+  color: $secondary-color-d;
+}
+
+form > label {
+  font-weight: 600;
+}
+
+/* Error Message */
+.error-min-input, 
+.error-max-input {
+  display: none;
+  color: $error;
+  font-size: 1.563rem;
+}
+
+/* Text Area */
+#tweet-text {
+  @extend %primary-color-theme;
+  display: block;
+  width: 100%;
+  height: 4rem;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: $border-secondary-color-d;
+  resize: none;
+}
+
+/* Submit */
+.tweet-submission {
+  @include flex-justify(space-between);
+  margin-top: 1.2rem;
+  font: 1.25rem $secondary-font;
+}
+
+.tweet-button {
+  @extend %primary-color-theme;
+  padding: 0.4rem;
+  border: $border-secondary-color-d;
+  border-radius: 0.6rem;
+}
+
+/* Applied in jQuery only*/
+.count-negative {
+  color: $error;
+  border: 1px solid $error;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.tweet-fade {
+  opacity: 0.4;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  form {
+    margin-top: 0rem;
+  }
+  
+  /* Pseudo-Selectors */
+  .tweet-button:hover {
+    color: $primary-color-d;
+    background-color: $secondary-color-d;
+    cursor: pointer;
+  }
+}

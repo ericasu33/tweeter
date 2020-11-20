@@ -1,0 +1,36 @@
+/* ---------------- */
+/*    Return Top    */
+/* ---------------- */
+
+#scroll-to-top-button {
+  @extend %display-fixed;
+  @extend %primary-color-theme;
+  bottom: 1.5rem;
+  right: 2.5rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 99;
+  border: 3px solid $accent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Pseudo-Selectors */
+#scroll-to-top-button:focus {
+  outline: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  #scroll-to-top-button {
+    width: 4rem;
+    height: 4rem;
+    font-size: 0.8rem;;
+  }
+
+  /* Pseudo-Selectors */
+  #scroll-to-top-button:hover {
+    color: $primary-color-d;
+    background-color: $secondary-color-d;
+  }
+}
