@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 /* ---------------- */
 /*      Tweets      */
 /* ---------------- */
@@ -13,21 +7,6 @@ $(document).ready(function() {
   /* -----------------*/
   /*   Tweet Display  */
   /* -----------------*/
-
-  // Timestamp for tweet creationg
-  const getTimestamp = function(tweetObj) {
-    const oneDayInMs = 1000 * 60 * 60 * 24;
-    const nowInMs = new Date().getTime();
-    const createdInMs = tweetObj.created_at;
-    const differenceMs = nowInMs - createdInMs;
-    const dayBeforeNow = Math.floor(differenceMs / oneDayInMs);
-
-    if (dayBeforeNow === 1) {
-      return `${dayBeforeNow} day ago`;
-    }
-
-    return `${dayBeforeNow} days ago`;
-  };
 
   // Prevent XSS
   const escape = function(str) {
@@ -39,7 +18,7 @@ $(document).ready(function() {
   // Tweet post creation
   const createTweetElement = function(tweetObj) {
     const tweetUser = tweetObj.user;
-    const createdAt = getTimestamp(tweetObj);
+    const createdAt = moment(tweetObj.created_at).fromNow();
 
     return `
       <article class="tweet-post">
