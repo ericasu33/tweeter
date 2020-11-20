@@ -9,9 +9,9 @@
   align-items: center;
   height: 25rem;
   margin-top: 7.5rem;
+  color: var(--color-d-dark);
   background-color: var(--color-d-light);
   background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
-  color: var(--color-d-dark);
 }
 
 /* Profile Name */
