@@ -5,12 +5,16 @@ Tweeter is a simple, single-page Twitter clone.
 This is a student project based off of this [repository](https://github.com/lighthouse-labs/tweeter). 
 
 The following front-end stacks are used to work on this project: 
-- HTML
-- CSS
-- Sass
-- JS
-- jQuery
-- AJAX 
+- HTML | CSS | Sass | JS | jQuery | AJAX
+
+Deployed Website: https://ericasu-tweeterapp.herokuapp.com/
+
+## Screenshots
+!["Top-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Top-Desktop.png?raw=true)
+!["Onscroll-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Scroll-Desktop.png?raw=true)
+!["Error-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Error-Desktop.png?raw=true)
+!["Error-Mobile"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Error-Mobile.png?raw=true)
+!["Exceed-wordCount-onScroll-Mobile"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-wordCountExceeded-Mobile.png?raw=true)
 
 ## Getting Started
 
@@ -29,14 +33,10 @@ The following front-end stacks are used to work on this project:
 ## CDN (No installation required)  
 
 - jQuery 3.4.1
+- moment.js
 - fontAwesome
 
 ## Design
 This app uses a responsive web design.
 
-## Screenshots
-!["Top-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Top-Desktop.png?raw=true)
-!["Onscroll-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Scroll-Desktop.png?raw=true)
-!["Error-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Error-Desktop.png?raw=true)
-!["Error-Mobile"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Error-Mobile.png?raw=true)
-!["Exceed-wordCount-onScroll-Mobile"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-wordCountExceeded-Mobile.png?raw=true)
+
