@@ -95,12 +95,13 @@ $(document).ready(function() {
 
     // Validation
     const tweetContentChar = $("#tweet-text").val().length;
+    const tweetContent = $("#tweet-text").val();
 
     if (tweetContentChar > 140) {
       $(".error-max-input").show();
       $("#tweet-text").focus();
       return;
-    } else if (!$.trim($("#tweet-text").val())) {
+    } else if (!$.trim(tweetContent)) {
       $(".error-min-input").show();
       $("#tweet-text").focus();
       return;
