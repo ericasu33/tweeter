@@ -3,14 +3,15 @@
 /* ---------------- */
 
 $(document).ready(function() {
-  
+  $("#tweet-text").focus();
+
   /* -----------------*/
   /*   Tweet Display  */
   /* -----------------*/
 
   // Prevent XSS
   const escape = function(str) {
-    let div = document.createElement("div");
+    const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
@@ -49,7 +50,7 @@ $(document).ready(function() {
   // Tweets display on browser
   const renderTweets = function(tweets) {
     for (const tweetObj of tweets) {
-      let tweet = createTweetElement(tweetObj);
+      const tweet = createTweetElement(tweetObj);
       $("#tweet-display").prepend(tweet);
     }
   };
@@ -65,6 +66,11 @@ $(document).ready(function() {
         renderTweets(allTweets);
       });
   };
+
+  $("#tweet-text").focusout(function() {
+    $(".error-max-input").hide();
+    $(".error-min-input").hide();
+  });
   
   $("form").on("submit", function(event) {
     event.preventDefault();
