@@ -11,11 +11,7 @@ nav {
   background-color: var(--color-d-dark);
   color: var(--color-d-light);
   z-index: 1;
- }
-
- .nav-on-scroll {
-  box-shadow: 0 2px 4px 0 var(--color-d-light);
- }
+}
  
  .nav-logo {
   font: 1.953rem 'Bungee', sans-serif;
@@ -26,7 +22,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1.5em 1.5em 0 1.5em;
- }
+}
 
 .nav-new-tweet {
   display: flex;
@@ -62,6 +58,10 @@ nav {
   100% { transform: translateY(0.4rem); }
 }
 
+/* Applied in jQuery only*/
+.nav-on-scroll {
+  box-shadow: 0 2px 4px 0 var(--color-d-light);
+}
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
