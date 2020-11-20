@@ -21,6 +21,7 @@ $(document).ready(function() {
     } else if (remainingChar === 140) {
       counter.removeClass("count-negative");
       $(".tweet-button").addClass("tweet-fade");
+      $(".error-max-input").hide();
     } else {
       counter.removeClass("count-negative");
       $(this).removeClass("tweet-fade");
