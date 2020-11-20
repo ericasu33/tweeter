@@ -1,0 +1,34 @@
+/* ---------------- */
+/* GLOBAL VARIABLES */
+/* ---------------- */
+
+// Colors
+$primary-color-d: #2D3047;
+$secondary-color-d: #FF9B71;
+$accent: #FFFFFF;
+$error: #ff5f54;
+
+%primary-color-theme {
+  background-color: $primary-color-d;
+  color: $secondary-color-d;
+}
+
+%secondary-color-theme {
+  background-color: $secondary-color-d;
+  color: $primary-color-d;
+}
+
+$border-secondary-color-d: 2px solid $secondary-color-d;
+
+// Fonts
+$primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'Bungee', sans-serif;
+
+// Display
+%display-fixed {
+  display: none;
+  position: fixed;
+}
+
+// Position
+$nav-height: 7.5rem;
