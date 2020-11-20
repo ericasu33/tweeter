@@ -40,7 +40,7 @@ article img {
 article footer {
   display: flex;
   justify-content: space-between;
-  border-top: 3px solid var(--color-d-light);
+  border-top: 2px solid var(--color-d-light);
   margin: 1rem;
   padding: 1rem 1rem 0.3rem 1rem;
   font-size: 1rem;
