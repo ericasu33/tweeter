@@ -12,7 +12,6 @@ The following front-end stacks are used to work on this project:
 - jQuery
 - AJAX 
 
-
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
@@ -31,3 +30,13 @@ The following front-end stacks are used to work on this project:
 
 - jQuery 3.4.1
 - fontAwesome
+
+## Design
+This app uses a responsive web design.
+
+## Screenshots
+!["Top-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Top-Desktop.png?raw=true)
+!["Onscroll-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Scroll-Desktop.png?raw=true)
+!["Error-Desktop"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Error-Desktop.png?raw=true)
+!["Error-Mobile"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-Error-Mobile.png?raw=true)
+!["Exceed-wordCount-onScroll-Mobile"](https://github.com/ericasu33/tweeter/blob/master/docs/Tweet-wordCountExceeded-Mobile.png?raw=true)
