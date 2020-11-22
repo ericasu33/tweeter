@@ -17,9 +17,9 @@ $(document).ready(function() {
   };
 
   // Tweet post creation
-  const createTweetElement = function(tweetObj) {
-    const tweetUser = tweetObj.user;
-    const createdAt = moment(tweetObj.created_at).fromNow();
+  const createTweetElement = function(tweet) {
+    const tweetUser = tweet.user;
+    const createdAt = moment(tweet.created_at).fromNow();
 
     return `
       <article class="tweet-post">
@@ -32,7 +32,7 @@ $(document).ready(function() {
           <div class="tweet-post-handle"> ${tweetUser.handle} </div>
         </header>
 
-        <div class="tweet-post-content"> ${escape(tweetObj.content.text)} </div>
+        <div class="tweet-post-content"> ${escape(tweet.content.text)} </div>
 
         <footer>
           <div> ${createdAt} </div>
@@ -79,10 +79,10 @@ $(document).ready(function() {
     $(".tweet-button").addClass("tweet-fade");
 
     // Validation
-    const tweetContentChar = $("#tweet-text").val().length;
+    const tweetContentLength = $("#tweet-text").val().length;
     const tweetContent = $("#tweet-text").val();
 
-    if (tweetContentChar > 140) {
+    if (tweetContentLength > 140) {
       $(".error-max-input").show();
       $("#tweet-text").focus();
       return;
@@ -112,9 +112,9 @@ $(document).ready(function() {
 
   // Remove error message once validation passes
   $("#tweet-text").on("input", function() {
-    const tweetContentChar = $("#tweet-text").val().length;
+    const tweetContentLength = $("#tweet-text").val().length;
 
-    if (tweetContentChar >= 1 && tweetContentChar <= 140) {
+    if (tweetContentLength >= 1 && tweetContentLength <= 140) {
       $(".error-max-input, .error-min-input").hide();
     }
   });
