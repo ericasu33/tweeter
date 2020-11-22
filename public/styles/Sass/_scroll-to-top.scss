@@ -2,6 +2,10 @@
 /*    Return Top    */
 /* ---------------- */
 
+html {
+  scroll-behavior: smooth;
+}
+
 #scroll-to-top-button {
   @extend %display-fixed;
   @extend %primary-color-theme;

@@ -1,7 +1,6 @@
 /* ---------------- */
 /* GLOBAL VARIABLES */
 /* ---------------- */
-
 nav, #tweet-text, .tweet-button, #scroll-to-top-button {
   background-color: #2D3047;
   color: #FF9B71;
@@ -15,7 +14,6 @@ nav, #tweet-text, .tweet-button, #scroll-to-top-button {
 /* ---------------- */
 /*      Header      */
 /* ---------------- */
-
 /* Overall Header */
 .desktop-flex > header {
   display: -webkit-box;
@@ -84,11 +82,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 /* ---------------- */
 /*      Layout      */
 /* ---------------- */
-
 /* Mobile */
 @media only screen and (max-width: 1024px) {
   main {
@@ -118,7 +114,6 @@ body {
 /* ---------------- */
 /*        Nav       */
 /* ---------------- */
-
 /* Set nav-bar to fixed */
 nav {
   top: 0;
@@ -228,7 +223,6 @@ nav .new-tweet-icon-bounce {
 /* ---------------- */
 /*    New Tweet     */
 /* ---------------- */
-
 form {
   margin-top: 2rem;
   color: #FF9B71;
@@ -307,7 +301,6 @@ form > label {
 /* ---------------- */
 /*   Tweet Display  */
 /* ---------------- */
-
 /* Display of tweets */
 .tweet-post {
   margin: 3rem 0 3rem 0;
@@ -405,6 +398,9 @@ article:hover .tweeter-function-icons {
 /* ---------------- */
 /*    Return Top    */
 /* ---------------- */
+html {
+  scroll-behavior: smooth;
+}
 
 #scroll-to-top-button {
   bottom: 1.5rem;
