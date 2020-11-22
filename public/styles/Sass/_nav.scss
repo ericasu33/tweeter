@@ -10,19 +10,27 @@ nav {
   height: $nav-height;
   width: 100vw;
   z-index: 1;
+
   .nav-words {
     @include flex-justify(space-between);
     padding: 1.5em 1.5em 0 1.5em;
   }
+
   .nav-logo {
     font: 1.953rem $secondary-font;
   }
+
   .nav-new-tweet {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
   }
+
+  .nav-write-tweet {
+    display: none;
+  }
+
   /* Empasis on new tweet word -write- */
   .nav-bold {
     font-weight: bold;

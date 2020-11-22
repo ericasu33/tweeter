@@ -153,6 +153,10 @@ nav .nav-new-tweet {
   cursor: pointer;
 }
 
+nav .nav-write-tweet {
+  display: none;
+}
+
 nav .nav-bold {
   font-weight: bold;
   color: #FFFFFF;
