@@ -11,7 +11,7 @@ $(document).ready(function() {
     const noSpace = $.trim($(this).val());
     const countChar = noSpace.length;
     const remainingChar = 140 - countChar;
-    const counter = $(this).parent().find("output");
+    const counter = $(".counter");
 
     // change color once counter is negative
     if (remainingChar < 0) {
