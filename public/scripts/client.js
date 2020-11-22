@@ -76,7 +76,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     // Fadeout submit button if no content
-    $(".tweet-button").css("opacity", "0.4");
+    $(".tweet-button").addClass("tweet-fade");
 
     // Validation
     const tweetContentChar = $("#tweet-text").val().length;
