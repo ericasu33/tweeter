@@ -49,6 +49,12 @@ $(document).ready(function() {
 
   // Tweets display on browser
   const renderTweets = function(tweets) {
+    if (!Array.isArray(tweets)) {
+      const tweet = createTweetElement(tweets);
+      $("#tweet-display").prepend(tweet);
+      return;
+    }
+      
     for (const tweetObj of tweets) {
       const tweet = createTweetElement(tweetObj);
       $("#tweet-display").prepend(tweet);
@@ -60,10 +66,15 @@ $(document).ready(function() {
   /* ---------------- */
 
   // Display tweets
-  const loadTweets = function() {
+  const loadTweets = function(newTweet) {
     $.ajax("/tweets")
       .then(function(allTweets) {
-        renderTweets(allTweets);
+        if (newTweet) {
+          renderTweets(allTweets[allTweets.length - 1]);
+        }
+        if (!newTweet) {
+          renderTweets(allTweets);
+        }
       });
   };
 
@@ -100,8 +111,8 @@ $(document).ready(function() {
       }
     )
       .then(function() {
-        $("#tweet-display").empty();
-        loadTweets();
+        const newTweet = true;
+        loadTweets(newTweet);
       });
     
     // Reset character limit to 140
@@ -119,7 +130,8 @@ $(document).ready(function() {
     }
   });
   
-  loadTweets();
+  const newTweet = false;
+  loadTweets(newTweet);
 });
 
 
